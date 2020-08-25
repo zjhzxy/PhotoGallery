@@ -96,7 +96,8 @@ class PagerPhotoFragment : Fragment() {
         })
 
         viewPager2.setCurrentItem(arguments?.getInt("PHOTO_POSITION") ?: 0, false)
-
+        // photo页面垂直滑动
+        viewPager2.orientation = ViewPager2.ORIENTATION_VERTICAL
         saveButton.setOnClickListener {
             if (Build.VERSION.SDK_INT < 29 && ContextCompat.checkSelfPermission(
                     requireContext(),
